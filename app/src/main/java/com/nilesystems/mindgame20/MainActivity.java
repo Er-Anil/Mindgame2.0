@@ -31,23 +31,89 @@ public class MainActivity extends AppCompatActivity {
         Random ran = new Random();
         int a = ran.nextInt(200);
         int b = ran.nextInt(200);
-        tt2.setText(Integer.toString(a) + "+" + Integer.toString(b));
-        //aa.add(a + b);
+        int Incrcktans = 0;
 
-        Crcktans = ran.nextInt(4);
-        aa.clear();
-        for (int i = 0; i < 4; i++) {
-            if (i == Crcktans) {
-                aa.add(a + b);
+        int randomMath = ran.nextInt(4);
 
-            } else {
-                Incrcktans = ran.nextInt(400);
-                while (Incrcktans == a + b) {
-                    Incrcktans = ran.nextInt(400);
+        switch(randomMath) {
+            case 0 :
+                tt2.setText(Integer.toString(a) + "+" + Integer.toString(b));
+                //aa.add(a + b);
+
+                Crcktans = ran.nextInt(4);
+                aa.clear();
+                for (int i = 0; i < 4; i++) {
+                    if (i == Crcktans) {
+                        aa.add(a + b);
+
+                    } else {
+                        Incrcktans = ran.nextInt(400);
+                        while (Incrcktans == a + b) {
+                            Incrcktans = ran.nextInt(400);
+                        }
+                    }
+                    aa.add(Incrcktans);
                 }
-            }
-            aa.add(Incrcktans);
+
+                break;
+
+            case 1 :
+                tt2.setText(Integer.toString(a) + " - " + Integer.toString(b));
+                Incrcktans = ran.nextInt(4);
+                aa.clear();
+                for (int i=0; i<4; i++) {
+                    if (i == Crcktans) {
+                        aa.add(a - b);
+                    } else {
+                        Incrcktans = ran.nextInt(41);
+                        while (Incrcktans == a - b) {
+                            Incrcktans = ran.nextInt(41);
+                        }
+                        aa.add(Incrcktans);
+                    }
+                }
+                break;
+
+            case 2 :
+                tt2.setText(Integer.toString(a) + " X " + Integer.toString(b));
+                Incrcktans = ran.nextInt(4);
+                aa.clear();
+                for (int i=0; i<4; i++) {
+                    if (i == Crcktans) {
+                        aa.add(a * b);
+                    } else {
+                        Incrcktans = ran.nextInt(401);
+                        while (Incrcktans == a * b) {
+                            Incrcktans = ran.nextInt(401);
+                        }
+                        aa.add(Incrcktans);
+                    }
+                }
+                break;
+
+            case 3 :
+                if((a>b)&&(a%b==0)) {
+                    tt2.setText(Integer.toString(a) + " / " + Integer.toString(b));
+                    Crcktans = ran.nextInt(4);
+                    aa.clear();
+                    for (int i = 0; i < 4; i++) {
+                        if (i == Crcktans) {
+                            aa.add(a / b);
+                        } else {
+                            Incrcktans = ran.nextInt(41);
+                            while (Incrcktans == a - b) {
+                                Incrcktans = ran.nextInt(41);
+                            }
+                            aa.add(Incrcktans);
+                        }
+                    }
+                }
+                aa.clear();
+                questions();
+                break;
         }
+
+
         b1.setText(Integer.toString(aa.get(0)));
         b2.setText(Integer.toString(aa.get(1)));
         b3.setText(Integer.toString(aa.get(2)));
