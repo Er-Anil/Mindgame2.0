@@ -33,9 +33,9 @@ public class MainActivity extends AppCompatActivity {
         int b = ran.nextInt(200);
         int Incrcktans = 0;
 
-        int randomMath = ran.nextInt(4);
+        int casess = ran.nextInt(4);
 
-        switch(randomMath) {
+        switch(casess) {
             case 0 :
                 tt2.setText(Integer.toString(a) + "+" + Integer.toString(b));
                 //aa.add(a + b);
@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
 
             case 1 :
                 tt2.setText(Integer.toString(a) + " - " + Integer.toString(b));
-                Incrcktans = ran.nextInt(4);
+                Crcktans = ran.nextInt(4);
                 aa.clear();
                 for (int i=0; i<4; i++) {
                     if (i == Crcktans) {
