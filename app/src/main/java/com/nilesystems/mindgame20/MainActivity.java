@@ -182,15 +182,15 @@ public class MainActivity extends AppCompatActivity {
             public void onFinish() {
                 float value = (score / noofqu) * 100;
                 if (value > 97.00) {
-                    tt4.setText("Amazing Score!" + " " + Float.toString(value) + "%");
+                    tt4.setText("Einstein!" + " " + Float.toString(value) + "%");
                 } else if (value < 96.00 && value > 80.00) {
-                    tt4.setText("Great Score!" + " " + Float.toString(value) + "%");
+                    tt4.setText("Great" + " " + Float.toString(value) + "%");
 
                 } else if (value > 60.00 && value < 80.00) {
-                    tt4.setText("Good Score!" + " " + Float.toString(value) + "%");
+                    tt4.setText("Average" + " " + Float.toString(value) + "%");
                 } else if (value < 60.00 && value >= 0.00) {
 
-                    tt4.setText("Tryagain!,score" + " " + Float.toString(value) + "%");
+                    tt4.setText("Worst!" + " " + Float.toString(value) + "%");
                 }
                 tt1.setText("0s");
                 bt2.setVisibility(View.VISIBLE);
